@@ -62,7 +62,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a IAM role name
 
-etadata:
+Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
