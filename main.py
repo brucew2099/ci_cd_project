@@ -6,7 +6,6 @@ import logging
 import datetime
 import functools
 import jwt
-import urllib3
 
 # pylint: disable=import-error
 from flask import Flask, jsonify, request, abort
@@ -14,9 +13,6 @@ from flask import Flask, jsonify, request, abort
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'abc123abc1234')
 LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
-
-# Disable SNIMissingWarning during build process
-urllib3.disable_warnings()
 
 
 def _logger():
